@@ -28,6 +28,12 @@ function updateDisplay() {
         bookNameDiv.textContent = book.name;
         bookCardDiv.appendChild(bookNameDiv);
 
+        const bookAuthorDiv = document.createElement("div");
+        bookAuthorDiv.classList.add("book-author");
+        bookAuthorDiv.textContent = "By: " + book.author;
+        bookCardDiv.appendChild(bookAuthorDiv);
+
+
 
         displayDiv.appendChild(bookCardDiv);
     }

@@ -13,23 +13,23 @@ function addBookToLibrary(name, author, pages, read) {
 }
 
 function updateDisplay() {
-    const display = document.querySelector(".display");
-    display.innerHTML = "";
+    const displayDiv = document.querySelector(".display");
+    displayDiv.innerHTML = "";
 
     for (const [i, book] of myLibrary.entries()) {
-        const content = document.createElement("div");
-        content.classList.add("book-card");
+        const bookCardDiv = document.createElement("div");
+        bookCardDiv.classList.add("book-card");
 
         const bookId = "Book-" + i;
-        content.id = bookId;
+        bookCardDiv.id = bookId;
 
         const bookNameDiv = document.createElement("div");
         bookNameDiv.classList.add("book-name");
         bookNameDiv.textContent = book.name;
-        content.appendChild(bookNameDiv);
+        bookCardDiv.appendChild(bookNameDiv);
 
 
-        display.appendChild(content);
+        displayDiv.appendChild(bookCardDiv);
     }
 }
 

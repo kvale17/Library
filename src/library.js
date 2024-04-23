@@ -26,7 +26,9 @@ function updateDisplay() {
     }
 }
 
-
+addBookToLibrary("Bible", "Jesus");
+addBookToLibrary("Coding for Dummies", "Me");
+updateDisplay();
 
 
 

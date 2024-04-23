@@ -77,3 +77,8 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+
+.book-name {
+  font-size: 1.3em;
+  font-weight: bold;
+}

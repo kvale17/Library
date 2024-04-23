@@ -33,14 +33,17 @@ function updateDisplay() {
         bookAuthorDiv.textContent = "By: " + book.author;
         bookCardDiv.appendChild(bookAuthorDiv);
 
-
+        const bookPagesDiv = document.createElement("div");
+        bookPagesDiv.classList.add("book-pages");
+        bookPagesDiv.textContent = "Pages: " + book.pages;
+        bookCardDiv.appendChild(bookPagesDiv);
 
         displayDiv.appendChild(bookCardDiv);
     }
 }
 
-addBookToLibrary("Bible", "Jesus");
-addBookToLibrary("Coding for Dummies", "Me");
+addBookToLibrary("Bible", "Jesus", 300, true);
+addBookToLibrary("Coding for Dummies", "Me", 500, true);
 updateDisplay();
 
 

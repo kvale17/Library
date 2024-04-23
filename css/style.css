@@ -70,4 +70,9 @@ body {
   width: 300px;
   height: 200px;
   border: solid black 3px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
 }

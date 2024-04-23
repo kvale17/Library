@@ -19,7 +19,14 @@ function updateDisplay() {
     for (const [i, book] of myLibrary.entries()) {
         const content = document.createElement("div");
         content.classList.add("book-card");
-        content.id = "Book-" + i;
+
+        const bookId = "Book-" + i;
+        content.id = bookId;
+
+        const bookNameDiv = document.createElement("div");
+        bookNameDiv.classList.add("book-name");
+        bookNameDiv.textContent = book.name;
+        content.appendChild(bookNameDiv);
 
 
         display.appendChild(content);

@@ -32,15 +32,17 @@ body {
   padding: 20px;
   font-weight: bolder;
   font-size: 1.7em;
+
+  border-bottom: solid black 3px;
 }
 
-#book-icon{
-    width: 40px;
-    height: 40px;
+#book-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .footer {
-  background-color: rgb(223, 216, 216);
+  background-color: rgb(189, 184, 184);
   height: 60px;
 
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;

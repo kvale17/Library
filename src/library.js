@@ -13,11 +13,10 @@ function addBookToLibrary(name, author, pages, read) {
 }
 
 function updateDisplay() {
+    const display = document.querySelector(".display");
+    display.innerHTML = "";
+
     for (const book in myLibrary) {
-        const display = document.querySelector(".display");
-
-        display.innerHTML = "";
-
         const content = document.createElement("div");
         content.classList.add("book-card");
 

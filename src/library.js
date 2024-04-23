@@ -12,3 +12,15 @@ function addBookToLibrary(name, author) {
     myLibrary.push(book);
 }
 
+function updateDisplay() {
+    for (const book in myLibrary) {
+        const display = document.querySelector(".display");
+        const content = document.createElement("div");
+        content.classList.add("book-card");
+        display.appendChild(content);
+    }
+}
+
+
+
+

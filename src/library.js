@@ -16,9 +16,10 @@ function updateDisplay() {
     const display = document.querySelector(".display");
     display.innerHTML = "";
 
-    for (const book in myLibrary) {
+    for (const [i, book] of myLibrary.entries()) {
         const content = document.createElement("div");
         content.classList.add("book-card");
+        content.id = "Book-" + i;
 
 
         display.appendChild(content);

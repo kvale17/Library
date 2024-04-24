@@ -71,10 +71,23 @@ document.querySelector('.display').onclick = function (event) {
     if (event.target && event.target.matches('.fa')) {
         const bookCard = event.target.parentElement;
         const index = parseInt(bookCard.id);
-
         deleteBook(index)
     }
+
+    if (event.target.value) {
+        const bookCard = event.target.parentElement.parentElement;
+        const index = parseInt(bookCard.id);
+
+        if (event.target.checked) {
+            myLibrary[index].read = true;
+        }
+        else {
+            myLibrary[index].read = false;
+        }
+    }
 }
+
+
 
 
 addBookToLibrary("Bible", "Jesus", 300, true);

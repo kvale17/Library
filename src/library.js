@@ -41,7 +41,12 @@ function updateDisplay() {
         const bookReadDiv = document.createElement("div");
         bookReadDiv.classList.add("book-read");
         bookReadDiv.textContent = "Read: ";
+        const checkBox = document.createElement("input");
+        checkBox.setAttribute("type", "checkbox");
+        bookReadDiv.classList.add("checkbox");
+        bookReadDiv.appendChild(checkBox);
         bookCardDiv.appendChild(bookReadDiv);
+        
 
         const deleteButton = document.createElement("i");
         deleteButton.classList = "fa fa-trash-o";

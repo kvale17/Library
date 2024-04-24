@@ -85,8 +85,8 @@ body {
   font-style: oblique;
 }
 
-.book-author{
-    font-weight: bold;
+.book-author {
+  font-weight: bold;
 }
 
 .fa.fa-trash-o {
@@ -100,8 +100,8 @@ body {
   cursor: pointer;
 }
 
-.book-read{
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
+.book-read {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
 }

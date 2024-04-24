@@ -45,6 +45,11 @@ function updateDisplay() {
         checkBox.setAttribute("type", "checkbox");
         bookReadDiv.classList.add("checkbox");
         bookReadDiv.appendChild(checkBox);
+
+        if(book.read === true) {
+            checkBox.checked = true;
+        }
+
         bookCardDiv.appendChild(bookReadDiv);
         
 
@@ -57,7 +62,7 @@ function updateDisplay() {
 }
 
 addBookToLibrary("Bible", "Jesus", 300, true);
-addBookToLibrary("Coding For Dummies", "Me", 500, true);
+addBookToLibrary("Coding For Dummies", "Me", 500, false);
 updateDisplay();
 
 

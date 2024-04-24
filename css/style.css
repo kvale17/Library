@@ -67,6 +67,8 @@ body {
 
   padding: 50px;
   gap: 10px;
+
+  min-width: 522px;
 }
 
 .book-card {

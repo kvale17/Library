@@ -67,8 +67,8 @@ body {
 
 .book-card {
   background-color: white;
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 250px;
   border: solid black 3px;
 
   padding: 20px;
@@ -88,4 +88,5 @@ body {
   color: red;
 
   align-self: flex-end;
+  padding-bottom: 0px;
 }

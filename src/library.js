@@ -38,6 +38,11 @@ function updateDisplay() {
         bookPagesDiv.textContent = "Pages: " + book.pages;
         bookCardDiv.appendChild(bookPagesDiv);
 
+        const bookReadDiv = document.createElement("div");
+        bookReadDiv.classList.add("book-read");
+        bookReadDiv.textContent = "Read: ";
+        bookCardDiv.appendChild(bookReadDiv);
+
         const deleteButton = document.createElement("i");
         deleteButton.classList = "fa fa-trash-o";
         bookCardDiv.appendChild(deleteButton);
@@ -47,7 +52,7 @@ function updateDisplay() {
 }
 
 addBookToLibrary("Bible", "Jesus", 300, true);
-addBookToLibrary("Coding for Dummies", "Me", 500, true);
+addBookToLibrary("Coding For Dummies", "Me", 500, true);
 updateDisplay();
 
 

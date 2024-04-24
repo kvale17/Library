@@ -66,11 +66,21 @@ function deleteBook(index) {
     updateDisplay();
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-document.querySelector('.display').onclick = function (event) {
+document.querySelector('.display').onclick = async function (event) {
     if (event.target && event.target.matches('.fa')) {
         const bookCard = event.target.parentElement;
         const index = parseInt(bookCard.id);
+
+        bookCard.innerHTML = "";
+        bookCard.style.borderColor = "rgb(223, 216, 216)";
+        bookCard.style.backgroundColor = "rgb(223, 216, 216)";
+
+        await sleep(300);
+
         deleteBook(index)
     }
 

@@ -195,7 +195,7 @@ label {
   z-index: 99 !important;
 }
 
-input {
+.book-form input {
   width: 100%;
   height: 40px;
   text-indent: 10px;
@@ -224,3 +224,5 @@ input {
 .submit {
   background-color: rgb(15, 170, 15);
 }
+
+

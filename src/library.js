@@ -11,7 +11,7 @@ function addBookToLibrary(name, author, pages, read) {
     const book = new Book(name, author, pages, read);
     myLibrary.push(book);
 
-    console.log("Added book: " + Object.values(book));
+    console.dir("Added book: " + JSON.stringify(book));
 }
 
 function updateDisplay() {

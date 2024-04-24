@@ -82,6 +82,7 @@ body {
 .book-name {
   font-size: 1.3em;
   font-weight: bold;
+  font-style: oblique;
 }
 
 .book-author{

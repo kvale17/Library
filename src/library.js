@@ -129,17 +129,3 @@ document.querySelector('.display').onclick = async function (event) {
     }
 }
 
-
-addBookToLibrary("Bible", "Jesus", 300, true);
-addBookToLibrary("Coding For Dummies", "Me", 500, false);
-
-for (var i = 0; i < 26; i++) {
-    addBookToLibrary("Book " + i, "Me", 500, false);
-}
-
-
-updateDisplay();
-
-
-
-

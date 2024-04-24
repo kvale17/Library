@@ -70,6 +70,14 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function showForm() {
+    document.querySelector('.book-form').style.display = 'block';
+}
+
+function hideForm() {
+    document.getElementsByClassName('.book-form').style.display = 'none';
+}
+
 document.querySelector('.display').onclick = async function (event) {
     if (event.target && event.target.matches('.fa')) {
         const bookCard = event.target.parentElement;

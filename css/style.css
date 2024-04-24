@@ -16,6 +16,10 @@ body {
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@ body {
 
 .footer {
   background-color: rgb(189, 184, 184);
-  height: 60px;
+  min-height: 60px;
 
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5em;
@@ -104,4 +108,10 @@ body {
   position: absolute;
   bottom: 15px;
   left: 15px;
+}
+
+.scrollable {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }

@@ -38,6 +38,10 @@ function updateDisplay() {
         bookPagesDiv.textContent = "Pages: " + book.pages;
         bookCardDiv.appendChild(bookPagesDiv);
 
+        const deleteButton = document.createElement("i");
+        deleteButton.classList = "fa fa-trash-o";
+        bookCardDiv.appendChild(deleteButton);
+
         displayDiv.appendChild(bookCardDiv);
     }
 }

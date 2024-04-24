@@ -82,3 +82,10 @@ body {
   font-size: 1.3em;
   font-weight: bold;
 }
+
+.fa.fa-trash-o {
+  font-size: 30px;
+  color: red;
+
+  align-self: flex-end;
+}

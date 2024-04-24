@@ -12,6 +12,23 @@
 </head>
 
 <body>
+
+    <form class="modal book-form">
+        <label for="bookName">Book Name:</label>
+        <input type="text" id="bookName" name="bookName" required><br><br>
+        <label for="bookAuthor">Author:</label>
+        <input type="text" id="bookAuthor" name="bookAuthor" required><br><br><br><br>
+        <label for="pages">Number of pages:</label>
+        <input type="number" id="pages" name="pages" required><br><br>
+        <div id="wrapper">
+            <label for="read">Read?:</label>
+            <input id="yes" class="read-bool" type="radio" name="yes_no">Yes</input>
+            <input id="no" class="read-bool" type="radio" name="yes_no" checked>No</input>
+        </div>
+        <br><br>
+        <input class="submit" type="submit" value="Add Book">
+    </form>
+
     <div class="main">
         <div class="header">
             <span>Kevin's Library</span>

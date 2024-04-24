@@ -84,6 +84,10 @@ body {
   font-weight: bold;
 }
 
+.book-author{
+    font-weight: bold;
+}
+
 .fa.fa-trash-o {
   font-size: 30px;
   color: red;
@@ -91,4 +95,10 @@ body {
   position: absolute;
   bottom: 15px;
   right: 15px;
+}
+
+.book-read{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
 }

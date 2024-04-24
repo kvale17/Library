@@ -20,7 +20,7 @@ function updateDisplay() {
         const bookCardDiv = document.createElement("div");
         bookCardDiv.classList.add("book-card");
 
-        const bookId = "Book-" + i;
+        const bookId = i;
         bookCardDiv.id = bookId;
 
         const bookNameDiv = document.createElement("div");
@@ -46,12 +46,12 @@ function updateDisplay() {
         bookReadDiv.classList.add("checkbox");
         bookReadDiv.appendChild(checkBox);
 
-        if(book.read === true) {
+        if (book.read === true) {
             checkBox.checked = true;
         }
 
         bookCardDiv.appendChild(bookReadDiv);
-        
+
 
         const deleteButton = document.createElement("i");
         deleteButton.classList = "fa fa-trash-o";
@@ -60,6 +60,22 @@ function updateDisplay() {
         displayDiv.appendChild(bookCardDiv);
     }
 }
+
+function deleteBook(index) {
+    myLibrary.splice(index, 1);
+    updateDisplay();
+}
+
+
+document.querySelector('.display').onclick = function (event) {
+    if (event.target && event.target.matches('.fa')) {
+        const bookCard = event.target.parentElement;
+        const index = parseInt(bookCard.id);
+
+        deleteBook(index)
+    }
+}
+
 
 addBookToLibrary("Bible", "Jesus", 300, true);
 addBookToLibrary("Coding For Dummies", "Me", 500, false);

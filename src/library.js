@@ -10,6 +10,8 @@ function Book(name, author, pages, read) {
 function addBookToLibrary(name, author, pages, read) {
     const book = new Book(name, author, pages, read);
     myLibrary.push(book);
+
+    console.log("Added book: " + Object.values(book));
 }
 
 function updateDisplay() {
@@ -75,8 +77,30 @@ function showForm() {
 }
 
 function hideForm() {
-    document.getElementsByClassName('.book-form').style.display = 'none';
+    document.querySelector('.book-form').style.display = 'none';
 }
+
+var form = document.querySelector(".book-form")
+function submitForm(event) {
+    //Preventing page refresh
+    event.preventDefault();
+
+    const bookName = document.querySelector("#bookName").value;
+    const bookAuthor = document.querySelector("#bookAuthor").value;
+    const pages = document.querySelector("#pages").value;
+    const read = document.querySelector("#yes").checked;
+
+    addBookToLibrary(bookName, bookAuthor, pages, read);
+
+    updateDisplay();
+
+    form.reset();
+
+    hideForm();
+}
+
+form.addEventListener('submit', submitForm);
+
 
 document.querySelector('.display').onclick = async function (event) {
     if (event.target && event.target.matches('.fa')) {
@@ -104,8 +128,6 @@ document.querySelector('.display').onclick = async function (event) {
         }
     }
 }
-
-
 
 
 addBookToLibrary("Bible", "Jesus", 300, true);

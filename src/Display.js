@@ -52,10 +52,6 @@ class Display {
         }
     }
 
-    sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
     showForm() {
         document.querySelector('.book-form').style.display = 'block';
     }

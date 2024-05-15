@@ -1,5 +1,6 @@
 import { Display } from "../src/Display.js";
 import { Library } from "../src/Library.js";
+import { sleep } from "../src/utils.js";
 
 const library = new Library();
 const display = new Display(library);
@@ -35,7 +36,7 @@ document.querySelector('.display').onclick = async function (event) {
         bookCard.style.borderColor = "rgb(223, 216, 216)";
         bookCard.style.backgroundColor = "rgb(223, 216, 216)";
 
-        await display.sleep(300);
+        await sleep(300);
 
         library.deleteBook(index)
 
